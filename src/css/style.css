@@ -1,0 +1,45 @@
+.tree-cell .tree-disclosure-node {
+     -fx-shape: null;
+     -fx-background-color: null;
+
+     -fx-background-size:cover;
+     -fx-padding-right: 15px;
+     -fx-background-image: url("../images/closedFolder.png");
+ }
+ .tree-cell .tree-disclosure-node .arrow{
+      -fx-shape: null;
+      -fx-background-color: null;
+      -fx-background-image: null;
+  }
+  .tree-cell:expanded .tree-disclosure-node .arrow{
+        -fx-shape: null;
+        -fx-background-color: null;
+
+        -fx-background-image: null;
+    }
+ .tree-cell:expanded .tree-disclosure-node {
+     -fx-shape: null;
+     -fx-background-color: null;
+     -fx-background-size:cover;
+     -fx-padding-right: 15px;
+     -fx-background-image: url("../images/openedFolder.png");
+ }
+.button{
+
+       -fx-font-size: 12px; /* Размер текста меню */
+
+       -fx-background: #507299; /* Цвет блоков меню. */
+       -fx-color: white; /* Цвет текста в блоках меню. */
+
+       -fx-border:none;
+       -fx-border-bottom:white solid 1px;
+       -fx-outline: none;
+
+    }
+    .button:hover {
+       -fx-background: #92d3d3; /* Цвет фона при наведении курсора мыши */
+       -fx-color: #6b6b6b;  /* Цвет текста при наведении курсора мыши */
+    }
+   .button:active {
+      -fx-background: #509D99;
+    }

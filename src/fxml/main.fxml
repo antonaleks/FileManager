@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="612.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+  <children>
+      <HBox prefHeight="590.0" prefWidth="900.0" VBox.vgrow="ALWAYS">
+         <children>
+        <AnchorPane>
+               <children>
+                  <TreeView fx:id="treeView" onMouseClicked="#showFilesInWindow" prefHeight="542.0" prefWidth="221.0" styleClass="tree" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+        </AnchorPane>
+        <ScrollPane prefHeight="615.0" prefWidth="522.0" HBox.hgrow="ALWAYS">
+          <content>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="574.0" prefWidth="520.0" styleClass="window">
+                     <children>
+                        <FlowPane fx:id="window" prefHeight="580.0" prefWidth="520.0" AnchorPane.bottomAnchor="-35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+            </AnchorPane>
+          </content>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+        </ScrollPane>
+        <AnchorPane prefHeight="538.0" prefWidth="156.0">
+               <children>
+                  <GridPane prefHeight="549.0" prefWidth="157.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="newFolder" mnemonicParsing="false" onAction="#newFolderButton" prefHeight="120.0" prefWidth="157.0" text="Create new folder" />
+                        <Button fx:id="rename" mnemonicParsing="false" onAction="#renameButton" prefHeight="120.0" prefWidth="157.0" text="Rename" GridPane.rowIndex="1" />
+                        <Button fx:id="copy" mnemonicParsing="false" onAction="#copyButton" prefHeight="120.0" prefWidth="157.0" text="Copy" GridPane.rowIndex="2" />
+                        <Button fx:id="paste" mnemonicParsing="false" onAction="#pasteButton" prefHeight="120.0" prefWidth="157.0" text="Paste" GridPane.rowIndex="3" />
+                        <Button fx:id="delete" mnemonicParsing="false" onAction="#deleteButton" prefHeight="120.0" prefWidth="157.0" text="Delete" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+               </children>
+        </AnchorPane>
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="0.0" prefWidth="900.0">
+         <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Path:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+          <font>
+            <Font size="18.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+          </textFill>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </padding>
+        </Label>
+            <TextField fx:id="pathField" editable="false" layoutX="59.0" prefHeight="25.0" prefWidth="797.0" AnchorPane.bottomAnchor="5.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </padding>
+            </TextField>
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>
