@@ -60,21 +60,18 @@ public class MainController implements Initializable {
         if(pathField.getText()!=null){
             window.getChildren().clear();
             file = new WindowsFiles();
-            file.getFiles(pathField.getText(),window);
+            file.getFiles(pathField.getText(),window,pathField);
             treeView.setRoot(new DinamicFilesTree().createNode(new File("C:\\")));
         }
     }
 
     @FXML
     public void showFilesInWindow(MouseEvent mouseEvent) {
-       // window.paddingProperty().setValue(new Insets(60,60,60,60));
         TreeItem<File> rootPath= treeView.getSelectionModel().getSelectedItem();
         if(rootPath!=null){
             file = new WindowsFiles();
             pathField.setText(rootPath.getValue().getPath());
-            window.getChildren().clear();
-            file = new WindowsFiles();
-            file.getFiles(rootPath.getValue().getPath(),window);
+            file.getFiles(rootPath.getValue().getPath(),window,pathField);
         }
     }
 
